@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.succeed = (item) => (Object.assign({}, item, { durability: item.durability + 1 }));
-exports.fail = (item) => (Object.assign({}, item));
-exports.repair = (item) => (Object.assign({}, item, { durability: 100 }));
-exports.get = (item) => (Object.assign({}, item));
+const succeed = (item) => (Object.assign({}, item, { enhancement: Math.min(20, item.enhancement + 1) }));
+const fail = (item) => (Object.assign({}, item, { enhancement: item.enhancement > 16 ? item.enhancement - 1 : item.enhancement, durability: Math.max(0, item.enhancement < 15 ? item.durability - 5 : item.durability - 10) }));
+const repair = (item) => (Object.assign({}, item, { durability: 100 }));
+const get = (item) => (Object.assign({}, item));
+exports.enhancer = {
+    succeed,
+    fail,
+    repair,
+    get
+};
