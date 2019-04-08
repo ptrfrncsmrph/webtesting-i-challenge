@@ -24,7 +24,10 @@ const fail = (item: Item): Item => ({
   )
 })
 const repair = (item: Item): Item => ({ ...item, durability: 100 })
-const get = (item: Item): Item => ({ ...item })
+const get = (item: Item): Item => ({
+  ...item,
+  name: item.enhancement > 0 ? `[+${item.enhancement}] ${item.name}` : item.name
+})
 
 export const enhancer: Enhancer = {
   succeed,

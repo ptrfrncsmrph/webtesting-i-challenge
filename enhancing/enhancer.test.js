@@ -104,3 +104,27 @@ ava_1.default("`fail` when enhancement >= 15", t => {
     };
     t.deepEqual(fail(inputC), outputC);
 });
+ava_1.default("`get`", t => {
+    const inputA = {
+        name: "example",
+        durability: 10,
+        enhancement: 14
+    };
+    const outputA = {
+        name: "[+14] example",
+        durability: 10,
+        enhancement: 14
+    };
+    t.deepEqual(get(inputA), outputA);
+    const inputB = {
+        name: "example",
+        durability: 4,
+        enhancement: 0
+    };
+    const outputB = {
+        name: "example",
+        durability: 4,
+        enhancement: 0
+    };
+    t.deepEqual(get(inputB), outputB);
+});

@@ -108,3 +108,29 @@ test("`fail` when enhancement >= 15", t => {
   }
   t.deepEqual(fail(inputC), outputC)
 })
+
+test("`get`", t => {
+  const inputA: Item = {
+    name: "example",
+    durability: 10,
+    enhancement: 14
+  }
+  const outputA: Item = {
+    name: "[+14] example",
+    durability: 10,
+    enhancement: 14
+  }
+  t.deepEqual(get(inputA), outputA)
+
+  const inputB: Item = {
+    name: "example",
+    durability: 4,
+    enhancement: 0
+  }
+  const outputB: Item = {
+    name: "example",
+    durability: 4,
+    enhancement: 0
+  }
+  t.deepEqual(get(inputB), outputB)
+})
