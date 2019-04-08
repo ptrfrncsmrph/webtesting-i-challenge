@@ -1,2 +1,2 @@
-const enhancer = require('./enhancer.js');
-// test away!
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
