@@ -61,3 +61,5 @@ typings/
 .next
 
 .spago
+/output/
+.psc-ide-port
