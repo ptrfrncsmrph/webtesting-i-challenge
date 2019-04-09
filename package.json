@@ -1,0 +1,27 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "description": "In this project, you will demonstrate proficiency by writing unit tests and production code to satisfy the _Minimum Viable Product_ described below.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -w",
+    "tsc:watch": "tsc --skipLibCheck -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptrfrncsmrph/webtesting-i-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptrfrncsmrph/webtesting-i-challenge/issues"
+  },
+  "homepage": "https://github.com/ptrfrncsmrph/webtesting-i-challenge#readme",
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "jest": "^24.7.1",
+    "jsverify": "^0.8.4",
+    "ts-node": "^8.0.3"
+  }
+}
